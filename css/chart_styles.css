@@ -1,9 +1,16 @@
-.chart-row {
-    margin-bottom: 15px;
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
 }
+
+h1 {
+	margin-top: 20px;
+}
+
 .inline-chart {
-    display: inline-block;
-    width: 48%;
-    margin-left: 1%;
+	display: inline-block;
+	width: 48%;
+	margin-left: 1%;
 }
-/* Read more at http: //tutorials.pluralsight.com/front-end-javascript/building-a-dashboard-in-react#preparing-data-for-the-chart#hH5JGdCm16pJLk5K.99 */
