@@ -1,0 +1,9 @@
+.chart-row {
+    margin-bottom: 15px;
+}
+.inline-chart {
+    display: inline-block;
+    width: 48%;
+    margin-left: 1%;
+}
+/* Read more at http: //tutorials.pluralsight.com/front-end-javascript/building-a-dashboard-in-react#preparing-data-for-the-chart#hH5JGdCm16pJLk5K.99 */
