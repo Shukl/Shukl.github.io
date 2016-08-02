@@ -38,7 +38,7 @@ var MyApp = React.createClass({
         var monthlyDataSource = {
             chart: {
                 // caption options
-                "caption": "Culumative Weight (Month on Month)",
+                "caption": "Monthly Weights",
                 "xAxisName": "Month",
                 "yAxisName": "Weight(lbs)",
                 "theme": "carbon"
@@ -46,40 +46,40 @@ var MyApp = React.createClass({
             data: [
                 {
                     "label": "Jan",
-                    "value": "14100.1"
+                    "value": "1410.1"
                 }, {
                     "label": "Feb",
-                    "value": "12000.45"
+                    "value": "1200.45"
                 }, {
                     "label": "Mar",
-                    "value": "13345.23"
+                    "value": "1334.23"
                 }, {
                     "label": "Apr",
-                    "value": "11100"
+                    "value": "1110"
                 }, {
                     "label": "May",
-                    "value": "43800"
+                    "value": "4380"
                 }, {
                     "label": "Jun",
-                    "value": "29200"
+                    "value": "2920"
                 }, {
                     "label": "Jul",
-                    "value": "36500"
+                    "value": "3650"
                 }, {
                     "label": "Aug",
-                    "value": "64900"
+                    "value": "6490"
                 }, {
                     "label": "Sep",
-                    "value": "74600"
+                    "value": "7460"
                 }, {
                     "label": "Oct",
-                    "value": "80300"
+                    "value": "8030"
                 }, {
                     "label": "Nov",
-                    "value": "87600"
+                    "value": "8760"
                 }, {
                     "label": "Dec",
-                    "value": "73000"
+                    "value": "7300"
                 }
             ]
         };
@@ -96,19 +96,19 @@ var MyApp = React.createClass({
         var refuseTypeSource = {
             chart: {
                 // caption options
-                "caption": "Split of Type of Refuse (Past 12 Months)",
+                "caption": "Split of Type of Refuse (Past 12 Months / lbs)",
                 "theme": "carbon"
             },
             data: [
                 {
                     "label": "Trash",
-                    "value": "1460000"
+                    "value": "14600"
                 }, {
                     "label": "Compost",
-                    "value": "2190000"
+                    "value": "21900"
                 }, {
                     "label": "Recycling",
-                    "value": "1095000"
+                    "value": "10950"
                 }
             ]
         };
