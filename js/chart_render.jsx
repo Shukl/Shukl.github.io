@@ -131,8 +131,8 @@ var MyApp = React.createClass({
                         <react_fc.FusionCharts {...monthlyChartConfigs}/>
                     </div>
                 </div>
-                <div className="chart-row" className="inline-chart">
-                    <div id="weekly-weight">
+                <div className="chart-row">
+                    <div id="weekly-weight" className="inline-chart">
                         <react_fc.FusionCharts {...typeWeeklyConfigs}/>
                     </div>
                     <div id="refuse-type" className="inline-chart">
