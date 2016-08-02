@@ -3,138 +3,123 @@ var MyApp = React.createClass({
         var that = this,
             rows = [];
 
-        var countryDataSource = {
+        var typeWeeklySource = {
             "chart": {
                 // caption options
-                "caption": "Top Revenue Earning Countries",
-                "xAxisName": "Country",
-                "yAxisName": "Revenue (In USD)",
+                "caption": "Cumulative Weight (7 Day / Type Distribution)",
+                "xAxisName": "Refuse Type",
+                "yAxisName": "Weight(lbs)",
                 "theme": "carbon"
             },
 
             "data": [
                 {
-                    "label": "United States",
-                    "value": "920000"
+                    "label": "Compost",
+                    "value": "80"
                 }, {
-                    "label": "China",
-                    "value": "730000"
+                    "label": "Recycling",
+                    "value": "30"
                 }, {
-                    "label": "Germany",
-                    "value": "680000"
-                }, {
-                    "label": "United Kingdom",
-                    "value": "670000"
-                }, {
-                    "label": "Australia",
-                    "value": "639000"
-                }, {
-                    "label": "Canada",
-                    "value": "590000"
+                    "label": "Trash",
+                    "value": "112.5"
                 }
             ]
         };
 
-        var countryChartConfigs = {
+        var typeWeeklyConfigs = {
             type: "column2d",
-            renderAt: "country-revenue",
+            renderAt: "weekly-weight",
             width: '100%',
             height: 400,
             dataFormat: "json",
-            dataSource: countryDataSource
+            dataSource: typeWeeklySource
         };
 
         var monthlyDataSource = {
             chart: {
                 // caption options
-                "caption": "Monthly Revenue Trend",
+                "caption": "Culumative Weight (Month on Month)",
                 "xAxisName": "Month",
-                "yAxisName": "Revenue (In USD)",
+                "yAxisName": "Weight(lbs)",
                 "theme": "carbon"
             },
             data: [
                 {
                     "label": "Jan",
-                    "value": "657000"
+                    "value": "14100.1"
                 }, {
                     "label": "Feb",
-                    "value": "138000"
+                    "value": "12000.45"
                 }, {
                     "label": "Mar",
-                    "value": "192000"
+                    "value": "13345.23"
                 }, {
                     "label": "Apr",
-                    "value": "111000"
+                    "value": "11100"
                 }, {
                     "label": "May",
-                    "value": "438000"
+                    "value": "43800"
                 }, {
                     "label": "Jun",
-                    "value": "292000"
+                    "value": "29200"
                 }, {
                     "label": "Jul",
-                    "value": "365000"
+                    "value": "36500"
                 }, {
                     "label": "Aug",
-                    "value": "649000"
+                    "value": "64900"
                 }, {
                     "label": "Sep",
-                    "value": "746000"
+                    "value": "74600"
                 }, {
                     "label": "Oct",
-                    "value": "803000"
+                    "value": "80300"
                 }, {
                     "label": "Nov",
-                    "value": "876000"
+                    "value": "87600"
                 }, {
                     "label": "Dec",
-                    "value": "730000"
+                    "value": "73000"
                 }
             ]
         };
 
         var monthlyChartConfigs = {
             type: "spline",
-            renderAt: "monthly-revenue",
+            renderAt: "monthly-weight",
             width: '100%',
             height: 350,
             dataFormat: "json",
             dataSource: monthlyDataSource
         };
 
-        var productDataSource = {
+        var refuseTypeSource = {
             chart: {
                 // caption options
-                "caption": "Split of Revnue by Products",
+                "caption": "Split of Type of Refuse (Past 12 Months)",
                 "theme": "carbon"
             },
             data: [
                 {
-                    "label": "Product 1",
+                    "label": "Trash",
                     "value": "1460000"
                 }, {
-                    "label": "Product 2",
+                    "label": "Compost",
                     "value": "2190000"
                 }, {
-                    "label": "Product 3",
+                    "label": "Recycling",
                     "value": "1095000"
-                }, {
-                    "label": "Product 4",
-                    "value": "1095000"
-                }, {
-                    "label": "Product 5",
-                    "value": "1460000"
                 }
             ]
         };
 
-        var productChartConfigs = {
+        var typeChartConfigs = {
             type: "doughnut2d",
-            renderAt: "product-revenue",
+            renderAt: "refuse-type",
             width: '100%',
             height: 350,
             dataFormat: "json",
-            dataSource: productDataSource
+            dataSource: refuseTypeSource
         };
 
         return (
@@ -142,16 +127,16 @@ var MyApp = React.createClass({
                 <h1 className="main-title">Good Riddance Refuse Analysis for 2015</h1>
                 <div id="interactive-dashbaord"></div>
                 <div className="chart-row">
-                    <div id="country-revenue">
-                        <react_fc.FusionCharts {...countryChartConfigs}/>
+                    <div id="monthly-weight" className="inline-chart">
+                        <react_fc.FusionCharts {...monthlyChartConfigs}/>
                     </div>
                 </div>
                 <div className="chart-row">
-                    <div id="monthly-revenue" className="inline-chart">
-                        <react_fc.FusionCharts {...monthlyChartConfigs}/>
+                    <div id="weekly-weight">
+                        <react_fc.FusionCharts {...typeWeeklyConfigs}/>
                     </div>
-                    <div id="product-revenue" className="inline-chart">
-                        <react_fc.FusionCharts {...productChartConfigs}/>
+                    <div id="refuse-type" className="inline-chart">
+                        <react_fc.FusionCharts {...typeChartConfigs}/>
                     </div>
                 </div>
             </div>
